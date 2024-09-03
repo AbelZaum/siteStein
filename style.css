@@ -1,0 +1,161 @@
+
+/* Estilo para a página de Empreendimentos */
+/* Reseta margens e paddings padrão do navegador */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #046c83;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Estilo do contêiner do navbar */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo da seção dos empreendimentos */
+.empreendimentos-section {
+    padding: 80px 20px 20px; /* Adiciona padding no topo para o espaçamento do navbar fixo */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo do título da seção */
+.empreendimentos-section h1 {
+    font-size: 32px;
+    color: #004d40;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo das abas */
+.tab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos botões das abas */
+.tab button {
+    background-color: #00796b;
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+    flex: 1; /* Faz com que os botões ocupem espaço igual */
+    text-align: center; /* Centraliza o texto dentro dos botões */
+}
+
+/* Estilo do botão ativo */
+.tab button.active {
+    background-color: #004d40;
+}
+
+/* Estilo dos botões ao passar o mouse */
+.tab button:hover {
+    background-color: #004d40;
+}
+
+/* Estilo do conteúdo das abas */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Exibe o conteúdo da aba ativa */
+.tabcontent.show {
+    display: block;
+}
+
+/* Estilo dos cartões dos empreendimentos */
+.empreendimento-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.empreendimento-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.empreendimento-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+}
+
+.empreendimento-info {
+    padding: 15px;
+    flex: 1; /* Faz com que o conteúdo ocupe o espaço restante */
+}
+
+.empreendimento-info h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #00796b;
+}
+
+.empreendimento-info .status {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.empreendimento-info .descricao {
+    color: #555;
+}
+
+footer {
+    background: #046c83;
+    color: #e1e6e1f5;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto; /* Garante que o rodapé fique na parte inferior da página */
+}
+
+footer p {
+    margin: 0;
+}

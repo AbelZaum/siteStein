@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engenharia Especial - Construtora Stein</title>
+    <link rel="stylesheet" href="stylees.css">
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+</head>
+
+<body class="engenharia-especial">
+    <header>
+        <h1>Construtora Stein</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="empreendimentos.html">Empreendimentos</a></li>
+                <li><a href="engenharia_especial.html">Engenharia Especial</a></li>
+                <li><a href="empresa.html">Empresa</a></li>
+                <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
+                <li><a href="contato.html">Fale Conosco</a></li>
+                <li><a href="https://www.instagram.com/construtorastein/" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="engenharia-especial-section">
+        <h1>Engenharia Especial</h1>
+        <p>Com larga experiência no setor de construção civil, a Construtora Stein atua em todas as regiões do Brasil e
+            países do Mercosul. Os empreendimentos construídos vão desde pontes, viadutos, obras especiais, estaleiros,
+            universidades, obras comerciais, bancos, shoppings até complexos industriais.</p>
+        <p>A missão da Construtora Stein é atingir a excelência na área da construção civil tendo como princípios:</p>
+        <ul>
+            <li>Atender aos requisitos do cliente, conforme a legislação, com qualidade, dentro dos prazos e custos;
+            </li>
+            <li>Fornecer treinamento a seu pessoal;</li>
+            <li>Proporcionar ambiente de trabalho agradável e seguro;</li>
+            <li>Promover parceria com seus fornecedores;</li>
+            <li>Melhorar continuamente o seu sistema de Gestão da Qualidade.</li>
+        </ul>
+        <p>Em mais de 55 anos, já são mais de 5.000.000m²</p>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Todos')">Todos</button>
+            <button class="tablinks" onclick="openTab(event, 'ViadutosPontes')">Viadutos/Pontes</button>
+            <button class="tablinks" onclick="openTab(event, 'ComplexosIndustriais')">Complexos Industriais</button>
+            <button class="tablinks" onclick="openTab(event, 'ObrasEspeciais')">Obras Especiais</button>
+            <button class="tablinks" onclick="openTab(event, 'PapelCelulose')">Papel e Celulose</button>
+            <button class="tablinks" onclick="openTab(event, 'Universidades')">Universidades</button>
+            <button class="tablinks" onclick="openTab(event, 'Bancos')">Bancos</button>
+            <button class="tablinks" onclick="openTab(event, 'ShoppingCenter')">Shopping Center</button>
+            <button class="tablinks" onclick="openTab(event, 'ObrasPortuarias')">Obras Portuárias</button>
+        </div>
+
+        <div id="Todos" class="tabcontent active">
+            <!-- Adicione seus cartões de empreendimento aqui -->
+            <div class="empreendimento-card">
+                <img src="imagens/alva-fachada1.jpg" alt="Empreendimento Geral">
+                <div class="empreendimento-info">
+                    <h2>Empreendimento Geral</h2>
+                    <p>Descrição geral das obras que englobam todos os tipos mencionados.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ObrasEspeciais" class="tabcontent active">
+            <!-- Adicione seus cartões de empreendimento aqui -->
+            <div class="empreendimento-card">
+                <img src="imagens/bossa-fachada1.jpg" alt="Empreendimento Geral">
+                <div class="empreendimento-info">
+                    <h2>Empreendimento Geral</h2>
+                    <p>Descrição geral das obras que englobam todos os tipos mencionados.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="form-section">
+        <h2>Solicite um Orçamento</h2>
+        <form>
+            <label for="nome-orcamento">Nome*</label>
+            <input type="text" id="nome-orcamento" name="nome-orcamento" required>
+
+            <label for="email-orcamento">Email*</label>
+            <input type="email" id="email-orcamento" name="email-orcamento" required>
+
+            <label for="fone-orcamento">Fone</label>
+            <input type="tel" id="fone-orcamento" name="fone-orcamento">
+
+            <label for="mensagem-orcamento">Mensagem</label>
+            <textarea id="mensagem-orcamento" name="mensagem-orcamento" rows="4"></textarea>
+
+            <button type="submit">Enviar Solicitação</button>
+        </form>
+        <br><br>
+        <fieldset>
+            <h2>Trabalhe Conosco</h2>
+            <form>
+                <label for="nome-trabalho">Nome*</label>
+                <input type="text" id="nome-trabalho" name="nome-trabalho" required>
+
+                <label for="email-trabalho">E-mail*</label>
+                <input type="email" id="email-trabalho" name="email-trabalho" required>
+
+                <label for="curriculo">Anexar Currículo: .doc e .pdf</label>
+                <div class="file-upload">
+                    <input type="file" id="curriculo" name="curriculo" accept=".doc,.pdf">
+
+                </div>
+
+                <button type="submit">Enviar Currículo</button>
+            </form>
+        </fieldset>
+    </section>
+
+    <footer>
+        <p>Rua Theodoro Holtrup, 982 - Vila Nova - Blumenau/SC - Fone: +55 47 3144-7777</p>
+        <p>Rua Rui Barbosa, 356 - Bairro Costa e Silva - Joinville /SC - Fone/Fax: + 55 47 3435-4979</p>
+        <p>&copy; 2022 - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+
+</html>
