@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Construtora Stein</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="chat.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/favicon_stein.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <h1>Construtora Stein</h1>
+        <div class="logo">
+            <img src="imagens/Logo Stein.jpg" alt="Logo Construtora Stein">
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -25,6 +27,11 @@
                 <li><a href="https://www.instagram.com/construtorastein/" target="_blank"><i
                             class="fab fa-instagram"></i></a></li>
             </ul>
+        </nav>
+        <nav>
+            <a href="http://282d0144fc54.sn.mynetname.net:8081/" target="_blank">
+                <button class="client-area">Área do Cliente</button>
+            </a>
         </nav>
     </header>
 
@@ -50,11 +57,10 @@
 
     <!-- Popup Trigger -->
     <div id="popup-trigger">
-        <img src="imagens/favicon.png" alt="Chat Icon">
+        <img src="imagens/favicon_stein.ico" alt="Chat Icon">
     </div>
 
     <section id="home">
-        <h2>Bem-vindo à Construtora Stein</h2>
         <div class="carousel">
             <div class="carousel-images">
                 <div class="carousel-item"><img src="imagens/alva-fachada1.jpg" alt="Imagem 1">
@@ -72,34 +78,64 @@
         </div>
     </section>
 
-    <section id="projects">
-        <h2>Projetos</h2>
-        <div class="project">
-            <img src="imagens/serena-fachada1.jpg" alt="Projeto 1">
-            <div class="project-info">
-                <h3>Projeto 1</h3>
-                <p>Descrição do Projeto 1. Um projeto incrível que destaca nossa competência em engenharia e construção.
-                </p>
+    <section class="empreendimentos">
+        <h2>Empreendimentos</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="imagens/alva-fachada1.jpg" alt="Alva">
+                <h3>ALVA</h3>
+                <p>Lançamento - Praia do Mariscal, Bombinhas - SC</p>
+                <a href="https://alvamariscal.com.br/" target="_blank" class="btn-secondary">Saiba Mais</a>
             </div>
-        </div>
-        <div class="project">
-            <img src="imagens/alva-fachada1.jpg" alt="Projeto 2">
-            <div class="project-info">
-                <h3>Projeto 2</h3>
-                <p>Descrição do Projeto 2. Uma obra de grande porte com foco na inovação e sustentabilidade.</p>
+            <div class="card">
+                <img src="imagens/bossa-fachada1.jpg" alt="Bossa">
+                <h3>BOSSA</h3>
+                <p>Lançamento - Balneário Piçarras - SC</p>
+                <a href="https://www.steinbossa.com.br/" target="_blank" class="btn-secondary">Saiba Mais</a>
             </div>
-        </div>
-        <div class="project">
-            <img src="imagens/bossa-fachada1.jpg" alt="Projeto 3">
-            <div class="project-info">
-                <h3>Projeto 3</h3>
-                <p>Descrição do Projeto 3. Um exemplo de design moderno e funcionalidade.</p>
+            <div class="card">
+                <img src="imagens/serena-fachada1.jpg" alt="Serena">
+                <h3>SERENA</h3>
+                <p>Em construção - Balneário Piçarras - SC</p>
+                <a href="https://residencialserena.com.br/" target="_blank" class="btn-secondary">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <img src="imagens/reserva-fachada1.jpg" alt="Reserva">
+                <h3>RESERVA</h3>
+                <p>Em construção - Praia da Armação, Penha - SC</p>
+                <a href="https://www.construtorastein.com.br/reserva-da-armacao/index.html" target="_blank" class="btn-secondary">Saiba
+                    Mais</a>
             </div>
         </div>
     </section>
 
+    <section class="engenharia-especial">
+        <h2>Engenharia Especial</h2>
+        <p>Larga experiência no setor de construção civil.</p>
+        <p>Mais de 3.000.000 m² de área construída desde 1967, atuando em todas as regiões do Brasil e países do
+            Mercosul.</p>
+        <br>
+        <a href="engenharia_especial.html" class="btn-primary">Saiba Mais</a>
+    </section>
+
+    <section class="arquitetura">
+        <img src="imagens/logo-arquitetura.png" alt="Stein Arquitetura" class="arquitetura-logo">
+        <p>Design moderno transformando ambientes em arte.</p>
+        <br>
+        <a href="https://www.steinarquitetura.com.br/" target="_blank" class="btn-primary">Saiba Mais</a>
+    </section>
+
+    <section class="sac">
+        <h2>SAC</h2>
+        <p>O SAC foi desenvolvido para facilitar nosso contato com você.</p>
+        <br>
+        <a href="https://www.construtorastein.com.br/sac.html" target="_blank" class="btn-primary">Abrir um Chamado</a>
+    </section>
+    </main>
+
     <footer>
         <p>&copy; 2024 Construtora Stein. Todos os direitos reservados.</p>
+        <p>Rua Theodoro Holtrup, 982 - Vila Nova - Blumenau/SC | Tel: 47 3144-7777</p>
     </footer>
 
     <script>
@@ -120,19 +156,21 @@
         // Chama a função showNextSlide a cada 5 segundos
         setInterval(showNextSlide, 5000);
 
-        window.onload = function() {
+        window.onload = function () {
             const popupTrigger = document.getElementById('popup-trigger');
             const chatPopup = document.getElementById('chat-popup');
-            
-            popupTrigger.onclick = function() {
+
+            popupTrigger.onclick = function () {
                 chatPopup.style.display = 'flex';
             };
-            
-            document.getElementById('close-chat').onclick = function() {
+
+            document.getElementById('close-chat').onclick = function () {
                 chatPopup.style.display = 'none';
             };
         };
+
     </script>
+
 
     <script type="module" src="/main.js"></script>
     <script src="https://unpkg.com/markdown-it@8.4.2/dist/markdown-it.min.js"></script>

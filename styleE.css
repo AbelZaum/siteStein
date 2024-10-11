@@ -1,0 +1,122 @@
+/* Reseta o padding e margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+.navbar {
+    list-style-type: none;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar a.active {
+    color: #007bff;
+}
+
+.empreendimentos-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.tab-container {
+    margin-bottom: 30px;
+}
+
+.tab button {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tab button.active {
+    background-color: #046c83;
+    color: white;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.empreendimento-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.empreendimento-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 20px;
+}
+
+.status {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.status.em-construcao {
+    color: #ff8800;
+}
+
+.status.entregue {
+    color: #28a745;
+}
+
+.status.lancamento {
+    color: #007bff;
+}
+
+footer {
+    background-color: #046c83;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}

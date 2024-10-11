@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Construtora Stein</title>
+    <title>Contato</title>
     <link rel="stylesheet" href="stylec.css">
-    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/favicon_stein.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <h1>Construtora Stein</h1>
+        <div class="logo">
+            <img src="imagens/Logo Stein.jpg" alt="Logo Construtora Stein">
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,38 +22,58 @@
                 <li><a href="engenharia_especial.html">Engenharia Especial</a></li>
                 <li><a href="empresa.html">Empresa</a></li>
                 <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
-                <li><a href="contato.html" class="active">Fale Conosco</a></li>
+                <li><a href="contato.html">Fale Conosco</a></li>
+                <li><a href="https://www.instagram.com/construtorastein/" target="_blank"><i class="fab fa-instagram"></i></a></li>
             </ul>
+        </nav>
+        <nav>
+            <a href="http://282d0144fc54.sn.mynetname.net:8081/" target="_blank">
+                <button class="client-area">Área do Cliente</button>
+            </a>
         </nav>
     </header>
 
     <main>
-        <h1>Contato</h1>
-        <p>Preencha os dados logo abaixo para que possamos entrar em contato.</p>
+        <section class="contact-section">
+            <h1>Contato</h1>
+            <p>Preencha os dados logo abaixo para que possamos entrar em contato.</p>
 
-        <form action="/enviar" method="post">
-            <label for="nome">Nome*</label>
-            <input type="text" id="nome" name="nome" required>
+            <form action="/enviar" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome*</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="fone">Fone</label>
+                    <input type="tel" id="fone" name="fone">
+                </div>
+                <div class="form-group full-width">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
             
-            <label for="email">Email*</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="fone">Fone</label>
-            <input type="tel" id="fone" name="fone">
-            
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-            
-            <button type="submit">Enviar</button>
-            
-        </form>
-        
-            
-            <p>Telefone: <strong>47 3144-7777</strong></p>
+            <div class="contact-info">
+                <p><strong>Telefone:</strong> 47 3144-7777</p>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Construtora Stein</p>
+        <div class="footer-content">
+            <p>&copy; 2024 Construtora Stein. Todos os direitos reservados.</p>
+            <p>Rua Theodoro Holtrup, 992 - Vila Nova - Blumenau/SC</p>
+            <div class="sac">
+                <h3>SAC</h3>
+                <p>O SAC foi desenvolvido para facilitar nosso contato com você.</p>
+                <a href="https://www.construtorastein.com.br/sac.html" class="btn-sac">Abrir um Chamado</a>
+            </div>
+        </div>
     </footer>
 </body>
 

@@ -4,58 +4,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresa - Construtora Stein</title>
+    <title>Empresa</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/favicon_stein.ico" type="image/x-icon">
     <style>
-        /* Estilo para a página Empresa */
-        .empresa-info {
-            max-width: 800px;
-            margin: 20px auto;
+        /* Estilo geral */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+        }
+
+        header {
+
+            padding: 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #0c0c0c;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        main {
+            margin: 40px auto;
+            max-width: 1200px;
             padding: 20px;
             background-color: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        .empresa-info h2 {
+        section h2 {
+            text-align: center;
             color: #004d40;
-            font-size: 28px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .empresa-info p {
-            color: #555;
+        section p {
+            text-align: center;
             font-size: 16px;
-            line-height: 1.6;
+            color: #555;
+        }
+
+        .empresa-info,
+        .historico {
+            margin-bottom: 40px;
+        }
+
+        .historico h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        /* Estilo da timeline */
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            padding: 40px 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .timeline-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            padding: 20px 40px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* Linha vertical conectando os eventos */
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #004d40;
+            z-index: 1;
+        }
+
+        /* Traços conectando os eventos */
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            background-color: #004d40;
+            border-radius: 50%;
+            z-index: 2;
+            transform: translateX(-50%);
+        }
+
+        /* Data da linha do tempo */
+        .timeline-date {
+            width: 150px;
+            text-align: right;
+            margin-right: 20px;
+            color: #004d40;
+            font-weight: bold;
+        }
+
+        .timeline-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+            z-index: 3;
+        }
+
+        .timeline-icon.egon {
+            width: 200px;
+            height: 80px;
+        }
+
+        .timeline-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+            z-index: 3;
+        }
+
+        .timeline-content {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .timeline-content h3 {
+            color: #004d40;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004d40;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .timeline {
+                padding: 40px 0;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .timeline-date {
+                text-align: left;
+                margin-bottom: 10px;
+                width: auto;
+            }
+
+            .timeline-content {
+                width: auto;
+            }
+
+            .timeline-icon {
+                margin-bottom: 15px;
+            }
+        }
+
+        .sac {
+            margin-top: 20px;
+        }
+
+        .sac h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .sac p {
+            font-size: 1.2em;
+        }
+
+        .btn-sac {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
         }
     </style>
-
-
 </head>
 
 <body>
     <header>
-        <h1>Construtora Stein</h1>
+        <div class="logo">
+            <img src="imagens/Logo Stein.jpg" alt="Logo Construtora Stein">
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#empreendimentos">Empreendimentos</a></li>
-                <li><a href="index.html#engenharia">Engenharia Especial</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="empreendimentos.html">Empreendimentos</a></li>
+                <li><a href="engenharia_especial.html">Engenharia Especial</a></li>
                 <li><a href="empresa.html">Empresa</a></li>
                 <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
-                <li><a href="index.html#contato">Fale Conosco</a></li>
-                <li><a href="https://www.instagram.com/construtora.stein" target="_blank"><i
+                <li><a href="contato.html">Fale Conosco</a></li>
+                <li><a href="https://www.instagram.com/construtorastein/" target="_blank"><i
                             class="fab fa-instagram"></i></a></li>
             </ul>
+        </nav>
+        <nav>
+            <a href="http://282d0144fc54.sn.mynetname.net:8081/" target="_blank">
+                <button class="client-area">Área do Cliente</button>
+            </a>
         </nav>
     </header>
 
     <main>
         <section class="empresa-info">
-            <h2>Sobre a Construtora Stein</h2>
-            <p>A Construtora Stein foi fundada por Egon Alberto Stein em Blumenau, SC. Desde a sua fundação, nossa missão tem sido oferecer construções de alta qualidade com um compromisso firme com a excelência e a satisfação dos nossos clientes. Somos especializados em empreendimentos residenciais e comerciais, com um portfólio que demonstra nossa dedicação à inovação e à sustentabilidade.</p>
-            <p>Com uma equipe de profissionais experientes e qualificados, a Construtora Stein continua a crescer e a estabelecer novos padrões na indústria da construção. Nosso objetivo é não apenas atender, mas superar as expectativas dos nossos clientes, entregando projetos que combinem estética, funcionalidade e durabilidade.</p>
+            <h2>Histórico</h2>
+            <p>Com larga experiência no setor de construção civil, mais de 5.000.000 m² de área construída desde 1967, a
+                Construtora Stein atua em todas as regiões do Brasil e países do Mercosul.</p>
+            <p>Sua equipe técnica composta por engenheiros civis, em parceria com empresas selecionadas, tem investido
+                na melhoria de processos para satisfação total do mercado e antecipação de tendências.</p>
+        </section>
+
+        <section class="empresa-info">
+            <h2>Política da Qualidade</h2>
+            <p>A missão da Construtora Stein é atingir a excelência na área da construção civil tendo como princípios:
+            </p>
+            <ul>
+                <li>Fornecer treinamento a seu pessoal;</li>
+                <li>Proporcionar ambiente de trabalho agradável e seguro;</li>
+                <li>Promover parceria com seus fornecedores;</li>
+                <li>Melhorar continuamente o seu sistema de Gestão da Qualidade;</li>
+            </ul>
         </section>
 
         <section class="historico">
@@ -64,14 +282,16 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">1954</div>
+                    <img src="imagens/egon-1.png" alt="Fundação" class="timeline-icon egon">
                     <div class="timeline-content">
-                        <img src="imagens/egon-1.png" alt="Egon Alberto Stein" class="timeline-image">
                         <h3>Fundação</h3>
-                        <p>Egon Alberto Stein se forma em Engenharia Civil e funda a firma individual Engenheiro Egon Alberto Stein (atual Construtora STEIN).</p>
+                        <p>Egon Alberto Stein se forma em Engenharia Civil e funda a firma individual Engenheiro Egon
+                            Alberto Stein (atual Construtora STEIN).</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">1967</div>
+                    <img src="imagens/icon-stein.png" alt="Transformação" class="timeline-icon">
                     <div class="timeline-content">
                         <h3>Transformação</h3>
                         <p>A firma individual é transformada na atual Construtora STEIN.</p>
@@ -79,6 +299,7 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">2000</div>
+                    <img src="imagens/icon-stein.png" alt="Personalidade do Século" class="timeline-icon">
                     <div class="timeline-content">
                         <h3>Personalidade do Século</h3>
                         <p>Engenheiro Egon Alberto Stein é eleito Personalidade do Século.</p>
@@ -86,6 +307,7 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">2010</div>
+                    <img src="imagens/icon-stein.png" alt="Expansão" class="timeline-icon">
                     <div class="timeline-content">
                         <h3>Expansão</h3>
                         <p>Construtora STEIN formaliza sua entrada no segmento de empreendimentos imobiliários.</p>
@@ -93,31 +315,41 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">2012</div>
+                    <img src="imagens/icon-stein.png" alt="Reconhecimento" class="timeline-icon">
                     <div class="timeline-content">
                         <h3>Reconhecimento</h3>
-                        <p>A empresa entra na lista dos 500 Grandes na Construção Civil.</p>
+                        <p>A empresa entra na lista dos 500 Grandes na Construção.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">2020</div>
+                    <img src="imagens/icon-stein.png" alt="Litoral" class="timeline-icon">
                     <div class="timeline-content">
-                        <h3>Inovação</h3>
-                        <p>Sempre inovando, a STEIN lança o AÇU 88, prédio mais alto de Blumenau.</p>
+                        <h3>Prédio Mais Alto</h3>
+                        <p>Sempre inovando, a STEIN lança p AÇU 88, prédio mais alto de Blumenau.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">2022</div>
+                    <img src="imagens/icon-stein.png" alt="Litoral" class="timeline-icon">
                     <div class="timeline-content">
-                        <h3>Expansão para o Litoral</h3>
-                        <p>A construtora chega ao Litoral Norte Catarinense com seus empreendimentos imobiliários.</p>
+                        <h3>Investimento no Litoral</h3>
+                        <p>A construtora cehga ao Litoral Norte Catarinense com seus empreendimentos imobiliários.</p>
                     </div>
                 </div>
-            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Construtora Stein. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <p>&copy; 2024 Construtora Stein. Todos os direitos reservados.</p>
+            <p>Rua Theodoro Holtrup, 992 - Vila Nova - Blumenau/SC</p>
+            <div class="sac">
+                <h3>SAC</h3>
+                <p>O SAC foi desenvolvido para facilitar nosso contato com você.</p>
+                <a href="https://www.construtorastein.com.br/sac.html" class="btn-sac">Abrir um Chamado</a>
+            </div>
+        </div>
     </footer>
 </body>
 

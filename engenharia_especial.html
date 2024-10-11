@@ -4,15 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engenharia Especial - Construtora Stein</title>
-    <link rel="stylesheet" href="stylees.css">
-    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <title>Engenharia Especial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/favicon_stein.ico" type="image/x-icon">
 </head>
 
-<body class="engenharia-especial">
+<body>
+
+    <!-- Cabeçalho -->
     <header>
-        <h1>Construtora Stein</h1>
-        <nav class="navbar">
+        <div class="logo">
+            <img src="imagens/Logo Stein.jpg" alt="Logo Construtora Stein">
+        </div>
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="empreendimentos.html">Empreendimentos</a></li>
@@ -24,118 +29,257 @@
                             class="fab fa-instagram"></i></a></li>
             </ul>
         </nav>
+        <nav>
+            <a href="http://282d0144fc54.sn.mynetname.net:8081/" target="_blank">
+                <button class="client-area">Área do Cliente</button>
+            </a>
+        </nav>
     </header>
 
-    <section class="engenharia-especial-section">
-        <h1>Engenharia Especial</h1>
-        <p>Com larga experiência no setor de construção civil, a Construtora Stein atua em todas as regiões do Brasil e
-            países do Mercosul. Os empreendimentos construídos vão desde pontes, viadutos, obras especiais, estaleiros,
-            universidades, obras comerciais, bancos, shoppings até complexos industriais.</p>
-        <p>A missão da Construtora Stein é atingir a excelência na área da construção civil tendo como princípios:</p>
-        <ul>
-            <li>Atender aos requisitos do cliente, conforme a legislação, com qualidade, dentro dos prazos e custos;
-            </li>
-            <li>Fornecer treinamento a seu pessoal;</li>
-            <li>Proporcionar ambiente de trabalho agradável e seguro;</li>
-            <li>Promover parceria com seus fornecedores;</li>
-            <li>Melhorar continuamente o seu sistema de Gestão da Qualidade.</li>
-        </ul>
-        <p>Em mais de 55 anos, já são mais de 5.000.000m²</p>
+    <!-- Seção Principal -->
+    <main>
+        <!-- Hero Seção -->
+        <section class="hero-section">
+            <div class="container">
+                <h1>Engenharia Especial</h1>
+                <p>Com larga experiência no setor de construção civil, a Construtora Stein atua em todas as regiões do
+                    Brasil e países do Mercosul. Os empreendimentos construídos vão desde pontes, viadutos, obras
+                    especiais, estaleiros, universidades, obras comerciais, bancos, shoppings até complexos industriais.
+                </p>
+                <a href="#conheca-obras" class="cta-btn">Conheça Nossas Obras</a>
+            </div>
+        </section>
 
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'Todos')">Todos</button>
-            <button class="tablinks" onclick="openTab(event, 'ViadutosPontes')">Viadutos/Pontes</button>
-            <button class="tablinks" onclick="openTab(event, 'ComplexosIndustriais')">Complexos Industriais</button>
-            <button class="tablinks" onclick="openTab(event, 'ObrasEspeciais')">Obras Especiais</button>
-            <button class="tablinks" onclick="openTab(event, 'PapelCelulose')">Papel e Celulose</button>
-            <button class="tablinks" onclick="openTab(event, 'Universidades')">Universidades</button>
-            <button class="tablinks" onclick="openTab(event, 'Bancos')">Bancos</button>
-            <button class="tablinks" onclick="openTab(event, 'ShoppingCenter')">Shopping Center</button>
-            <button class="tablinks" onclick="openTab(event, 'ObrasPortuarias')">Obras Portuárias</button>
-        </div>
 
-        <div id="Todos" class="tabcontent active">
-            <!-- Adicione seus cartões de empreendimento aqui -->
-            <div class="empreendimento-card">
-                <img src="imagens/alva-fachada1.jpg" alt="Empreendimento Geral">
-                <div class="empreendimento-info">
-                    <h2>Empreendimento Geral</h2>
-                    <p>Descrição geral das obras que englobam todos os tipos mencionados.</p>
+        <section id="conheca-obras" class="obras-section">
+            <div class="container">
+                <h2>Conheça Algumas de Nossas Obras</h2>
+
+                <!-- Botões das Abas -->
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'Todos')">Todos</button>
+                    <button class="tablinks" onclick="openTab(event, 'ViadutosPontes')">Viadutos/Pontes</button>
+                    <button class="tablinks" onclick="openTab(event, 'ComplexosIndustriais')">Complexos
+                        Industriais</button>
+                    <button class="tablinks" onclick="openTab(event, 'ObrasEspeciais')">Obras Especiais</button>
+                    <button class="tablinks" onclick="openTab(event, 'PapelCelulose')">Papel e Celulose</button>
+                    <button class="tablinks" onclick="openTab(event, 'Universidades')">Universidades</button>
+                    <button class="tablinks" onclick="openTab(event, 'Bancos')">Bancos</button>
+                    <button class="tablinks" onclick="openTab(event, 'ShoppingCenter')">Shopping Center</button>
+                    <button class="tablinks" onclick="openTab(event, 'ObrasPortuarias')">Obras Portuárias</button>
+                </div>
+
+                <!-- Conteúdo das Abas -->
+                <div id="Todos" class="tabcontent">
+                    <h3>Todos</h3>
+                    <div class="obras-grid">
+                        <div class="obra-item">
+                            <img src="imagens/alva-fachada1.jpg" alt="Alva - SC">
+                            <h3>Alva - SC</h3>
+                            <p>Data: 2018</p>
+                        </div>
+                        <div class="obra-item">
+                            <img src="imagens/bossa-fachada1.jpg" alt="Bossa - SC">
+                            <h3>Bossa- SC</h3>
+                            <p>Data: 2019</p>
+                        </div>
+                        <div class="obra-item">
+                            <img src="imagens/reserva-fachada1.jpg" alt="Reserva">
+                            <h3>Reserva</h3>
+                            <p>Data: 2020</p>
+                        </div>
+                        <!-- Continue adicionando outras obras -->
+                    </div>
+                </div>
+
+                <div id="ViadutosPontes" class="tabcontent" style="display:none;">
+                    <h3>Viadutos/Pontes</h3>
+                    <div class="obras-grid">
+                        <div class="obra-item">
+                            <img src="imagens/viaduto1.jpg" alt="Viaduto Exemplo 1">
+                            <h3>TESTE 1</h3>
+                            <p>Data: 2020</p>
+                        </div>
+                        <div class="obra-item">
+                            <img src="imagens/viaduto2.jpg" alt="Viaduto Exemplo 2">
+                            <h3>TESTE 2</h3>
+                            <p>Data: 2021</p>
+                        </div>
+                        <!-- Continue com outras obras -->
+                    </div>
+                </div>
+
+                <div id="ComplexosIndustriais" class="tabcontent" style="display:none;">
+                    <h3>Complexos Industriais</h3>
+                    <div class="obras-grid">
+                        <div class="obra-item">
+                            <img src="imagens/complexo1.jpg" alt="Complexo Industrial Exemplo 1">
+                            <h3>Complexo Industrial Exemplo 1</h3>
+                            <p>Data: 2020</p>
+                        </div>
+                        <!-- Adicione mais obras se necessário -->
+                    </div>
+                </div>
+
+                <div id="ObrasEspeciais" class="tabcontent" style="display:none;">
+                    <h3>Obras Especiais</h3>
+                    <div class="obras-grid">
+                        <div class="obra-item">
+                            <img src="imagens/especial1.jpg" alt="Obra Especial Exemplo 1">
+                            <h3>Obra Especial Exemplo 1</h3>
+                            <p>Data: 2022</p>
+                        </div>
+                        <!-- Adicione mais obras se necessário -->
+                    </div>
+                </div>
+
+                <div id="PapelCelulose" class="tabcontent" style="display:none;">
+                    <h3>Papel e Celulose</h3>
+                    <div class="obras-grid">
+                        <div class="obra-item">
+                            <img src="imagens/papel1.jpg" alt="Obra de Papel e Celulose Exemplo">
+                            <h3>Obra de Papel e Celulose Exemplo</h3>
+                            <p>Data: 2023</p>
+                        </div>
+                        <!-- Adicione mais obras se necessário -->
+                    </div>
+                </div>
+
+                <div id="Universidades" class="tabcontent" style="display:none;">
+                    <h3>Universidades</h3>
+                    <div class="obras-grid">
+                        <div class="obra-item">
+                            <img src="imagens/universidade1.jpg" alt="Universidade Exemplo">
+                            <h3>Universidade Exemplo</h3>
+                            <p>Data: 2022</p>
+                        </div>
+                        <!-- Adicione mais obras se necessário -->
+                    </div>
+                </div>
+
+                <div id="Bancos" class="tabcontent" style="display:none;">
+                    <h3>Bancos</h3>
+                    <div class="obras-grid">
+                        <div class="obra-item">
+                            <img src="imagens/banco1.jpg" alt="Banco Exemplo">
+                            <h3>Banco Exemplo</h3>
+                            <p>Data: 2022</p>
+                        </div>
+                        <!-- Adicione mais obras se necessário -->
+                    </div>
+                </div>
+
+                <div id="ShoppingCenter" class="tabcontent" style="display:none;">
+                    <h3>Shopping Center</h3>
+                    <div class="obras-grid">
+                        <div class="obra-item">
+                            <img src="imagens/shopping1.jpg" alt="Shopping Center Exemplo">
+                            <h3>Shopping Center Exemplo</h3>
+                            <p>Data: 2023</p>
+                        </div>
+                        <!-- Adicione mais obras se necessário -->
+                    </div>
+                </div>
+
+                <div id="ObrasPortuarias" class="tabcontent" style="display:none;">
+                    <h3>Obras Portuárias</h3>
+                    <div class="obras-grid">
+                        <div class="obra-item">
+                            <img src="imagens/porto1.jpg" alt="Obra Portuária Exemplo">
+                            <h3>Obra Portuária Exemplo</h3>
+                            <p>Data: 2023</p>
+                        </div>
+                        <!-- Adicione mais obras se necessário -->
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="ObrasEspeciais" class="tabcontent active">
-            <!-- Adicione seus cartões de empreendimento aqui -->
-            <div class="empreendimento-card">
-                <img src="imagens/bossa-fachada1.jpg" alt="Empreendimento Geral">
-                <div class="empreendimento-info">
-                    <h2>Empreendimento Geral</h2>
-                    <p>Descrição geral das obras que englobam todos os tipos mencionados.</p>
+        <!-- Seção Clientes -->
+        <section class="clientes-section">
+            <div class="container">
+                <h2>Atendemos Todo o Brasil e Mercosul</h2>
+                <div class="clientes-slider">
+                    <div class="cliente-item"><img src="imagens/18.jpg" alt="Cliente 1"></div>
+                    <div class="cliente-item"><img src="imagens/15-1.jpg" alt="Cliente 2"></div>
+                    <!-- Repita o bloco de cliente para outros logos -->
                 </div>
             </div>
-        </div>
+        </section>
 
-    </section>
+        <!-- Formulário de Contato -->
+        <section class="form-section">
+            <div class="container">
+                <h2>Solicite um Orçamento</h2>
+                <form>
+                    <label for="nome">Nome*</label>
+                    <input type="text" id="nome" name="nome" required>
 
-    <section class="form-section">
-        <h2>Solicite um Orçamento</h2>
-        <form>
-            <label for="nome-orcamento">Nome*</label>
-            <input type="text" id="nome-orcamento" name="nome-orcamento" required>
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
 
-            <label for="email-orcamento">Email*</label>
-            <input type="email" id="email-orcamento" name="email-orcamento" required>
+                    <label for="fone">Telefone</label>
+                    <input type="tel" id="fone" name="fone">
 
-            <label for="fone-orcamento">Fone</label>
-            <input type="tel" id="fone-orcamento" name="fone-orcamento">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="4"></textarea>
 
-            <label for="mensagem-orcamento">Mensagem</label>
-            <textarea id="mensagem-orcamento" name="mensagem-orcamento" rows="4"></textarea>
+                    <button type="submit">Enviar Solicitação</button>
+                </form>
+            </div>
+        </section>
 
-            <button type="submit">Enviar Solicitação</button>
-        </form>
-        <br><br>
-        <fieldset>
-            <h2>Trabalhe Conosco</h2>
-            <form>
-                <label for="nome-trabalho">Nome*</label>
-                <input type="text" id="nome-trabalho" name="nome-trabalho" required>
+        <!-- Seção Trabalhe Conosco -->
+        <section class="trabalhe-conosco-section">
+            <div class="container">
+                <h2>Trabalhe Conosco</h2>
+                <form>
+                    <label for="nome-trabalho">Nome*</label>
+                    <input type="text" id="nome-trabalho" name="nome-trabalho" required>
 
-                <label for="email-trabalho">E-mail*</label>
-                <input type="email" id="email-trabalho" name="email-trabalho" required>
+                    <label for="email-trabalho">E-mail*</label>
+                    <input type="email" id="email-trabalho" name="email-trabalho" required>
 
-                <label for="curriculo">Anexar Currículo: .doc e .pdf</label>
-                <div class="file-upload">
+                    <label for="curriculo">Anexar Currículo (.doc, .pdf)</label>
                     <input type="file" id="curriculo" name="curriculo" accept=".doc,.pdf">
 
-                </div>
+                    <button type="submit">Enviar Currículo</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-                <button type="submit">Enviar Currículo</button>
-            </form>
-        </fieldset>
-    </section>
-
-    <footer>
-        <p>Rua Theodoro Holtrup, 982 - Vila Nova - Blumenau/SC - Fone: +55 47 3144-7777</p>
-        <p>Rua Rui Barbosa, 356 - Bairro Costa e Silva - Joinville /SC - Fone/Fax: + 55 47 3435-4979</p>
-        <p>&copy; 2022 - Todos os direitos reservados</p>
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>Rua Theodoro Holtrup, 982 - Vila Nova - Blumenau/SC - Fone: +55 47 3144-7777</p>
+            <p>Rua Rui Barbosa, 356 - Bairro Costa e Silva - Joinville /SC - Fone/Fax: + 55 47 3435-4979</p>
+            <p>&copy; 2024 - Todos os direitos reservados</p>
+        </div>
     </footer>
 
     <script>
         function openTab(evt, tabName) {
+            // Esconder todos os conteúdos das abas
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
+            // Remover a classe 'active' de todos os botões das abas
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
+            // Mostrar o conteúdo da aba ativa e adicionar a classe 'active' ao botão correspondente
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
         }
+
+        // Abrir a aba "Todos" por padrão ao carregar a página
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".tablinks").click();
+        });
     </script>
 </body>
 

@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empreendimentos</title>
+    <link rel="stylesheet" href="styleE.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/favicon_stein.ico" type="image/x-icon">
 </head>
 
-<body class="empreendimentos">
+<body>
     <header>
-
-        <h1>Construtora Stein</h1>
-
-        <nav class="navbar">
+        <div class="logo">
+            <img src="imagens/Logo Stein.jpg" alt="Logo Construtora Stein">
+        </div>
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="empreendimentos.html">Empreendimentos</a></li>
@@ -26,73 +27,82 @@
                             class="fab fa-instagram"></i></a></li>
             </ul>
         </nav>
+        <nav>
+            <a href="http://282d0144fc54.sn.mynetname.net:8081/" target="_blank">
+                <button class="client-area">Área do Cliente</button>
+            </a>
+        </nav>
     </header>
 
-    <!-- Div para as abas -->
+
     <section class="empreendimentos-section">
         <h1>Nossos Empreendimentos</h1>
-
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'Todos')">Todos</button>
-            <button class="tablinks" onclick="openTab(event, 'Lançamento')">Lançamento</button>
-            <button class="tablinks" onclick="openTab(event, 'EmConstrucao')">Em Construção</button>
-            <button class="tablinks" onclick="openTab(event, 'Entregues')">Entregues</button>
+        <br>
+        <div class="tab-container">
+            <div class="tab">
+                <button class="tablinks active" onclick="openTab(event, 'Todos')">Todos</button>
+                <button class="tablinks" onclick="openTab(event, 'Lançamento')">Lançamento</button>
+                <button class="tablinks" onclick="openTab(event, 'EmConstrucao')">Em Construção</button>
+                <button class="tablinks" onclick="openTab(event, 'Entregues')">Entregues</button>
+            </div>
         </div>
 
-        <!-- Conteúdo das Abas -->
         <div id="Todos" class="tabcontent">
-            <div class="empreendimento-card">
-                <img src="imagens/alva-fachada1.jpg" alt="Empreendimento 1" class="empreendimento-img">
-                <div class="empreendimento-info">
-                    <h2>Empreendimento 1</h2>
-                    <p class="status em-construcao">Status: Em Construção</p>
-                    <p class="descricao">Descrição breve do empreendimento 1, destacando suas principais características
-                        e localização.</p>
+            <div class="grid-container">
+                <div class="empreendimento-card">
+                    <img src="imagens/alva-fachada1.jpg" alt="Empreendimento 1">
+                    <div class="info">
+                        <h2>ALVA</h2>
+                        <p class="status em-construcao">Status: Em Construção</p>
+                        <p>Localização privilegiada em Balneário Piçarras.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="empreendimento-card">
-                <img src="imagens/bossa-fachada1.jpg" alt="Empreendimento 2" class="empreendimento-img">
-                <div class="empreendimento-info">
-                    <h2>Empreendimento 2</h2>
-                    <p class="status entregue">Status: Entregue</p>
-                    <p class="descricao">Descrição breve do empreendimento 2, destacando suas principais características
-                        e localização.</p>
+                <div class="empreendimento-card">
+                    <img src="imagens/bossa-fachada1.jpg" alt="Empreendimento 2">
+                    <div class="info">
+                        <h2>BOSSA</h2>
+                        <p class="status entregue">Status: Entregue</p>
+                        <p>Arquitetura moderna com lazer completo.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="Lançamento" class="tabcontent">
-            <div class="empreendimento-card">
-                <img src="imagens/alva-fachada1.jpg" alt="Empreendimento 3" class="empreendimento-img">
-                <div class="empreendimento-info">
-                    <h2>Empreendimento 3</h2>
-                    <p class="status lancamento">Status: Lançamento</p>
-                    <p class="descricao">Descrição breve do empreendimento 3, destacando suas principais características
-                        e localização.</p>
+            <div class="grid-container">
+                <div class="empreendimento-card">
+                    <img src="imagens/alva-fachada1.jpg" alt="Empreendimento 3">
+                    <div class="info">
+                        <h2>ALVA</h2>
+                        <p class="status lancamento">Status: Lançamento</p>
+                        <p>Design inovador com vista para o mar.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="EmConstrucao" class="tabcontent">
-            <div class="empreendimento-card">
-                <img src="imagens/reserva-fachada1.jpg" alt="Empreendimento 1" class="empreendimento-img">
-                <div class="empreendimento-info">
-                    <h2>Empreendimento 1</h2>
-                    <p class="status em-construcao">Status: Em Construção</p>
-                    <p class="descricao">Descrição breve do empreendimento 1, destacando suas principais características
-                        e localização.</p>
+            <div class="grid-container">
+                <div class="empreendimento-card">
+                    <img src="imagens/reserva-fachada1.jpg" alt="Empreendimento 4">
+                    <div class="info">
+                        <h2>RESERVA</h2>
+                        <p class="status em-construcao">Status: Em Construção</p>
+                        <p>Localização estratégica em meio à natureza.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="Entregues" class="tabcontent">
-            <div class="empreendimento-card">
-                <img src="imagens/serena-fachada1.jpg" alt="Empreendimento 2" class="empreendimento-img">
-                <div class="empreendimento-info">
-                    <h2>Empreendimento 2</h2>
-                    <p class="status entregue">Status: Entregue</p>
-                    <p class="descricao">Descrição breve do empreendimento 2, destacando suas principais características
-                        e localização.</p>
+            <div class="grid-container">
+                <div class="empreendimento-card">
+                    <img src="imagens/serena-fachada1.jpg" alt="Empreendimento 5">
+                    <div class="info">
+                        <h2>SERENA</h2>
+                        <p class="status entregue">Status: Entregue</p>
+                        <p>Conforto e qualidade de vida garantidos.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,26 +116,22 @@
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
 
-            // Esconde todo o conteúdo das abas
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
 
-            // Remove a classe 'active' de todos os botões
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
 
-            // Mostra a aba ativa e adiciona a classe 'active' ao botão correspondente
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
         }
 
-        // Exibe a aba "Todos" por padrão
         document.getElementById("Todos").style.display = "block";
-        document.querySelector(".tablinks").classList.add("active");
+
     </script>
 </body>
 
