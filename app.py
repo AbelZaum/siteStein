@@ -8,7 +8,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 app = Flask(__name__)
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyBK2HEDO9ppxqJAY3J8E4n2KtvTtjDFSaA"
+os.environ["GOOGLE_API_KEY"] = "AIzaSyBdUnvvq9XoQka97aW4x4mqwhzU7GyFGtg"
 
 
 @app.route('/')
