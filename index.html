@@ -50,7 +50,11 @@
         </div>
         <div id="chat-content"></div>
         <form id="chat-form">
-            <input type="text" name="prompt" placeholder="Digite sua mensagem...">
+            <input type="text" name="prompt" id="user-input" placeholder="Digite sua mensagem...">
+            <!-- Botão de microfone -->
+            <button type="button" id="microphone-btn">
+                <i class="fas fa-microphone"></i>
+            </button>
             <button type="submit">Enviar</button>
         </form>
     </div>
@@ -168,6 +172,32 @@
                 chatPopup.style.display = 'none';
             };
         };
+
+        const microphoneBtn = document.getElementById('microphone-btn');
+        const userInput = document.getElementById('user-input');
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+
+        recognition.lang = 'pt-BR'; // Define o idioma para português
+        recognition.interimResults = false; // Não mostrar resultados intermediários
+        recognition.maxAlternatives = 1; // Apenas uma alternativa
+
+        microphoneBtn.addEventListener('click', () => {
+            recognition.start();
+        });
+
+        recognition.addEventListener('result', (event) => {
+            const transcript = event.results[0][0].transcript;
+            userInput.value = transcript; // Coloca a transcrição no campo de entrada
+            console.log('Transcrição: ', transcript); // Para ver no console
+        });
+
+        recognition.addEventListener('speechend', () => {
+            recognition.stop(); // Para de escutar após a fala
+        });
+
+        recognition.addEventListener('error', (event) => {
+            console.error('Erro no reconhecimento de voz:', event.error);
+        });
 
     </script>
 
