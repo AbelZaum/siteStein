@@ -225,7 +225,7 @@
   padding: 10px;
   background-color: #f0f0f0;
   border-top: 1px solid #ccc;
-  align-items: center; /* Alinha verticalmente o input e o botão */
+  align-items: center;
 }
 
 #chat-form input {
@@ -235,7 +235,7 @@
   border-radius: 15px;
   margin-right: 10px;
   font-size: 14px;
-  box-sizing: border-box; /* Inclui o padding na largura total do elemento */
+  box-sizing: border-box;
 }
 
 #chat-form button {
@@ -246,7 +246,12 @@
   border-radius: 15px;
   cursor: pointer;
   font-size: 14px;
-  box-sizing: border-box; /* Inclui o padding na largura total do elemento */
+  margin-left: 5px;
+}
+
+#clear-chat-button {
+  background-color: #ff4d4d; /* Vermelho */
+  font-size: 14px;
 }
 
 /* Animações */
@@ -292,4 +297,14 @@
 
 .lia-message .chat-time {
   text-align: left;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:hover {
+  color: darkblue;
 }
