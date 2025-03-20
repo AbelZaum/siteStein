@@ -1,14 +1,14 @@
 export async function* streamOpenAI({
-  model = 'gpt-4o',
-  contents = [],
-} = {}) {
-  let response = await fetch("/api/generate", {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify({ model, contents })
-  });
+    model = 'gpt-3.5-turbo',
+    contents = [],
+  } = {}) {
+    let response = await fetch("https://cf1d-177-73-142-42.ngrok-free.app/api/generate", { // Defina a URL correta
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ model, contents })
+    });
 
-  yield* streamResponseChunks(response);
+    yield* streamResponseChunks(response);
 }
 
 async function* streamResponseChunks(response) {
