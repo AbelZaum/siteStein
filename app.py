@@ -6,7 +6,7 @@ from datetime import datetime
 from flask_cors import CORS
 
 # API Key fixa para teste
-openai.api_key = "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"
+openai.api_key = ""
 print("API KEY:", openai.api_key)
 
 app = Flask(__name__)
