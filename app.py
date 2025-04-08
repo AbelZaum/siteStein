@@ -18,7 +18,7 @@ app = Flask(__name__)
 # Configuração do CORS para aceitar requisições do domínio da Locaweb
 CORS(app, resources={
     r"/*": {
-        "origins": ["https://www.construtorastein.com.br", "http://localhost:5501"],
+        "origins": ["https://www.construtorastein.com.br"],
         "methods": ["GET", "POST", "OPTIONS"],
         "allow_headers": ["Content-Type", "Accept", "Cache-Control", "Connection"],
         "expose_headers": ["Content-Type"],
