@@ -15,7 +15,25 @@ if not openai.api_key:
     raise ValueError("A chave da API do OpenAI não foi configurada. Por favor, defina a variável de ambiente OPENAI_API_KEY.")
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+
+# Configuração do CORS para aceitar requisições do domínio da Locaweb
+CORS(app, resources={
+    r"/*": {
+        "origins": ["https://www.construtorastein.com.br", "http://localhost:5501"],
+        "methods": ["GET", "POST", "OPTIONS"],
+        "allow_headers": ["Content-Type", "Accept", "Cache-Control", "Connection"],
+        "expose_headers": ["Content-Type"],
+        "supports_credentials": True,
+        "max_age": 3600
+    }
+})
+
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', 'https://www.construtorastein.com.br')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Accept,Cache-Control,Connection')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
+    return response
 
 # Pasta segura para armazenar logs e leads (funciona local e no servidor)
 data_folder = os.path.join(os.path.dirname(__file__), 'data')
