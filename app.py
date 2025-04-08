@@ -15,7 +15,6 @@ if not openai.api_key:
     raise ValueError("A chave da API do OpenAI não foi configurada. Por favor, defina a variável de ambiente OPENAI_API_KEY.")
 
 app = Flask(__name__)
-
 # Configuração do CORS para aceitar requisições do domínio da Locaweb
 CORS(app, resources={
     r"/*": {
