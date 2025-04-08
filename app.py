@@ -15,7 +15,13 @@ if not openai.api_key:
     raise ValueError("A chave da API do OpenAI não foi configurada. Por favor, defina a variável de ambiente OPENAI_API_KEY.")
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={
+    r"/*": {
+        "origins": ["https://www.construtorastein.com.br", "http://localhost:5501"],
+        "methods": ["GET", "POST", "OPTIONS"],
+        "allow_headers": ["Content-Type", "Authorization"]
+    }
+})
 
 # Pasta segura para armazenar logs e leads (funciona local e no servidor)
 data_folder = os.path.join(os.path.dirname(__file__), 'data')
