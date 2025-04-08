@@ -4,10 +4,15 @@ import openai
 from flask import Flask, jsonify, request, send_file, send_from_directory
 from datetime import datetime
 from flask_cors import CORS
+from dotenv import load_dotenv
 
-# API Key fixa para teste
-openai.api_key = ""
-print("API KEY:", openai.api_key)
+# Carrega as variáveis de ambiente do arquivo .env
+load_dotenv()
+
+# Obtém a API Key das variáveis de ambiente
+openai.api_key = os.getenv("OPENAI_API_KEY")
+if not openai.api_key:
+    raise ValueError("A chave da API do OpenAI não foi configurada. Por favor, defina a variável de ambiente OPENAI_API_KEY.")
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
